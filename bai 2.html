@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai 2</title>
+</head>
+<body>
+<script>
+    let arr = [3,6,7,11,13,5,17,19,20,9];
+    function numb() {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 1) {
+                sum += arr[i];
+            }
+        }
+        document.write(sum);
+    }
+    numb(arr)
+</script>
+</body>
+</html>

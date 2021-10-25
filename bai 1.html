@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<form>
+    Enter a number: <input type="text" id="num">
+    <input type="button" value="show" onclick=" check()">
+
+</form>
+<script>
+    function num(N) {
+        if (N < 2) {
+            return false;
+        }
+        for (let i = 2; i < N; i++) {
+            if (N % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function check() {
+        let input = +document.getElementById("num").value;
+        let count = 0;
+        for (let i = 0; i < input;) {
+            if (num(count) === true) {
+                document.write(count + ",");
+                i++
+            }
+            count++
+        }
+    }
+
+    check();
+</script>
+</body>
+</html>
